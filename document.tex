@@ -425,7 +425,38 @@
 	 \begin{equation*}
 	 	\braket{N(t)}_{analytical } = \braket{N(t)}_{rep} = e^{-\frac{\ga}{2}t}\braket{N(0)}.
 	 \end{equation*}
+	 
+	 \begin{figure}[h!]
+	 	\label{fig:NAv}
+	 	\centering
+	 	\includegraphics[width=0.6\linewidth]{NAnalitical.JPG}
+	 	\caption{Average number of particles}
+	 \end{figure}
 
+	The evolution of the average number of particles is shown in Fig. \ref{fig:NAv}
+	
+	The same results for the average linear operators.
+	
+	We can also compare these results for the case when the higher order moments in Eq. \ref{eq:FinDinOfAv} are written out via Wick's theorem.
+	
+	\begin{figure}[h!]
+		\begin{center}
+			\begin{minipage}[h]{0.45\linewidth}
+				\includegraphics[width=1\linewidth]{Wickn0=1.JPG}
+				\caption{Comparison with initial number of particles = 1}
+				\label{fig:wick1}
+			\end{minipage}
+			\hfil
+			\begin{minipage}[h]{0.45\linewidth}
+				\includegraphics[width=1\linewidth]{Wickn0=6.JPG}
+				\caption{Comparison with initial number of particles = 6}
+				\label{fig:wick6}
+			\end{minipage}
+		\end{center}
+	\end{figure}
+
+	As can be seen in Fig. \ref{fig:wick1}, for the number of particles equal to 1, both methods give the same result, however, as the number of particles increases, they begin to decay, so the analytical results were obtained for two partial approximation and it stops working Fig. \ref{fig:wick6}.
+	
 	\section{Weak external field\label{sec:Efc}}
 	
 	In this section we consider the case when an external field is present in the system, i.e. $F \not= 0$. However, considering the general case is a difficult task due to the large number of summands in the oscillator, so we consider the case where the external field is small and the summands with $F^{1 + n}$, $n > 0$ can be neglected. 
@@ -469,56 +500,79 @@
 	\end{align*}
 	As we see, in this case such operator does not give an identical 0 when acting on the particle number operator.
 	
+	
+	
+	\begin{figure}[h!]
+		\begin{center}
+			\begin{minipage}[h]{0.45\linewidth}
+				\includegraphics[width=1\linewidth]{NWeakForce.JPG}
+				\caption{Average number of particles in the weak field}
+				\label{fig:weakforcen}
+			\end{minipage}
+			\hfil
+			\begin{minipage}[h]{0.45\linewidth}
+				\includegraphics[width=1\linewidth]{aWeakForce.JPG}
+				\caption{Mean of the linear operator in a weak field}
+				\label{fig:weakforcea}
+			\end{minipage}
+			\hfil
+			\begin{minipage}[h]{0.45\linewidth}
+				\includegraphics[width=1\linewidth]{a2WeakForce.JPG}
+				\caption{Mean of the quadratic operator in a weak field}
+				\label{fig:weakforceaa}
+			\end{minipage}
+		\end{center}
+	\end{figure}
+	
+	We can also compare the difference of our method from the method of just using Wick's theorem in Eq. \ref{eq:FinDinOfAv}. This can be done by calculating our equation with $F = 0$. Once we have done this we can compare the results. The results are presented in Fig. \ref{fig:compn} \ref{fig:compa} \ref{fig:compa2}
+	
+	
+	\begin{figure}[h!]
+		\begin{center}
+			\begin{minipage}[h!]{0.45\linewidth}
+				\includegraphics[width=1\linewidth]{Comparen.JPG}
+				\caption{Comparison of results for average particle number}
+				\label{fig:compn}
+			\end{minipage}
+			\hfil
+			\begin{minipage}[h!]{0.45\linewidth}
+				\includegraphics[width=1\linewidth]{Comparea.JPG}
+				\caption{Comparison of results for Mean of the linear operator}
+				\label{fig:compa}
+			\end{minipage}
+			\hfil
+			\begin{minipage}[h!]{0.45\linewidth}
+				\includegraphics[width=1\linewidth]{Comparea2.JPG}
+				\caption{Comparison of results for Mean of the quadratic operator}
+				\label{fig:compa2}
+			\end{minipage}
+		\end{center}
+	\end{figure}
 
-	\section{Strong external field}
+	As can be seen, the results are of order $\la$, but for the mean quadratic operator the averages themselves are of the same order.
 	
-	In this regime, we consider a system with a strong external field $F$, i.e., we discard all powers of $F$ smaller than 3.
 	
-	In this case the generator $\mathcal{L}_I$ has the following form
-
-	\begin{equation*}
-		\mathcal{L}(t)\cdot = -i\frac{\chi}{2}\left(  c_1(a\cdot) + c_2(\cdot{a}^+) + c_3({a}^+\cdot) + c_4(\cdot a) \right),
-	\end{equation*}
-	where
-	\begin{align*}
-		c_1 &= 2b_2^2b_1a_1 - 2b_3^2b_4a_{42},\\
-		c_2 &= 2b_1^2b_2a_{22} - 2b_4^2b_3a_3,\\
-		c_3 &= 2b_1^2b_2a_{21},\\
-		c_4 &= -2b_3^2b_4a_{41}.
-	\end{align*}
 	
-	The action of the conjugate generator on an arbitrary form of birth/annihilation operators has the following form
+	\bibliographystyle{unsrt}
+	\bibliography{ref}
 	
-	\begin{equation}
-		\label{eq:ConjStrongFild}
-		\mathcal{L}^*_I{a^+}^na^m =  -i\frac{\chi}{2}\left(  b_1{a^+}^na^{m+1} + b_2{a^+}^{n+1}a^m  + b_3{a^+}^na^{m-1} + b_4{a^+}^{n-1}a^m \right),
-	\end{equation}
-	where
-	\begin{align*}
-		b_1 &= c_1 + c_4,\\
-		b_2 &= c_2 + c_3,\\
-		b_3 &= mc_3,\\
-		b_4 &= nc_4.
-	\end{align*}
-	
-	\begin{thebibliography}{99}
+%	\begin{thebibliography}{99}
 		
-		\bibitem{KerrIntr} Lorenc D., Alpichshev Z. Dispersive effects in ultrafast nonlinear phenomena: The case of optical Kerr effect //Physical Review Research. – 2024. – V. 6. – N. 1. – Pg. 013042.
+%		\bibitem{KerrIntr} Lorenc D., Alpichshev Z. Dispersive effects in ultrafast nonlinear phenomena: The case of optical Kerr effect //Physical Review Research. – 2024. – V. 6. – N. 1. – Pg. 013042.
 		
-		\bibitem{GaussState} Menu R., Roscilde T. Gaussian-state Ansatz for the non-equilibrium dynamics of quantum spin lattices //SciPost Physics. – 2023. – V. 14. – N. 6. – Pg. 151.
+%		\bibitem{GaussState} Menu R., Roscilde T. Gaussian-state Ansatz for the non-equilibrium dynamics of quantum spin lattices //SciPost Physics. – 2023. – V. 14. – N. 6. – Pg. 151.
 		
-		\bibitem{Kholevo} A.S. Kholevo Quantum systems, channels, information. M.: MCNMO, 2010.
+%		\bibitem{Kholevo} A.S. Kholevo Quantum systems, channels, information. M.: MCNMO, 2010.
 		
-		\bibitem{MaslovN} Liu, Junqiu, et al. "High-yield, wafer-scale fabrication of ultralow-loss, dispersion-engineered silicon nitride photonic circuits." Nature communications 12.1 (2021): 2236.
+%		\bibitem{MaslovN} Liu, Junqiu, et al. "High-yield, wafer-scale fabrication of ultralow-loss, dispersion-engineered silicon nitride photonic circuits." Nature communications 12.1 (2021): 2236.
 		
-		\bibitem{MaslovSolve} S.P. Nikitin, A.V. Masalov. Quantum state evolution of the fundamental mode in the process of second-harmonic generation. Quantum Optics 3, № 2, 105-113 (1991).
+%		\bibitem{MaslovSolve} S.P. Nikitin, A.V. Masalov. Quantum state evolution of the fundamental mode in the process of second-harmonic generation. Quantum Optics 3, № 2, 105-113 (1991).
 		
-		\bibitem{Dis} Teretenkov A.E. (2018). Exactly solvable problems
-		irreversible quantum evolution
+%		\bibitem{Dis} Teretenkov A.E. (2018). Exactly solvable problems	irreversible quantum evolution
 		
-		\bibitem{NosalTeretenkov} Nosal Iu.A., Teretenkov A.E.  "Higher order moments dynamics for some multimode quantum master equations." Lobachevskii Journal of Mathematics 43.7 (2022): 1726-1739.
+%		\bibitem{NosalTeretenkov} Nosal Iu.A., Teretenkov A.E.  "Higher order moments dynamics for some multimode quantum master equations." Lobachevskii Journal of Mathematics 43.7 (2022): 1726-1739.
 		
-	\end{thebibliography}
+%	\end{thebibliography}
 	\newpage
 	\section{Appendix\label{App}}
 	
