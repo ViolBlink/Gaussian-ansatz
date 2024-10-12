@@ -198,7 +198,7 @@
 		KJ = 2\;\text{arcoth}\left(-2J^{-1}C\right).		
 	\end{equation}
 	
-	The derivative of the Gaussian exponent can be expressed as a quadratic form
+	The formula for the derivative of Gaussian ansatz can be found in \cite{Dis}
 	
 	\begin{equation}
 		\label{eq:DerWithLin}
@@ -208,19 +208,11 @@
 	\begin{align*}
 		M &= \frac{I}{C - \frac{J}{2}}\left(\frac{d}{dt}C\right)\frac{I}{C + \frac{J}{2}},\\
 		G &= \left(  I + \frac{2I}{2J^{-1}C - I}  \right)\frac{d}{dt}\left(\frac{I}{C + \frac{J}{2}}m\right),\\
-		c &=-m^T\frac{I}{2J^{-1}C -  I}\frac{d}{dt}\left(\frac{I}{C + \frac{J}{2}}m\right) + \frac{1}{2}\frac{d}{dt}m^T\left( \frac{I}{2J^{-1}C - I} - \frac{I}{2J^{-1}C + I} - KJ \right)J^{-1}m + \frac{d}{dt}c_t.
+		c &=-m^T\frac{I}{2J^{-1}C -  I}\frac{d}{dt}\left(\frac{I}{C + \frac{J}{2}}m\right) + \frac{1}{2}\frac{d}{dt}m^T\left( \frac{I}{2J^{-1}C - I} - \frac{I}{2J^{-1}C + I} - KJ \right)J^{-1}m + \frac{d}{dt}s.
 	\end{align*}
 %	where $g = -Km$, in which $m = (\braket{a} , \braket{a^+})^T$ and $C$ --- covariance matrix.
 	
 	A detailed derivation is provided in  Appendix \ref{App}.
-	
-	The formula for the derivative of Gaussian ansatz can be found in \cite{Dis}.
-	
-	\begin{equation}
-		\label{eq:difofrho}
-		\left(\dfrac{d}{dt}e^{\frac{1}{2}\mathfrak{a}^TK\mathfrak{a} + c}\right)e^{-\frac{1}{2}\mathfrak{a}^TK\mathfrak{a} - c} = \dfrac{1}{2}\mathfrak{a}^Te^{-KJ}\dfrac{d}{dt}e^{KJ}J^{-1}\mathfrak{a} + \dfrac{d}{dt}c,
-	\end{equation}
-	
 	
 	
 	
@@ -234,7 +226,7 @@
 	\begin{align*}
 		M' &= \frac{1}{2}e^{-KJ}Me^{JK}, \\
 		f' &= e^{-KJ}M\frac{e^{JK} - I}{JK}Jg + e^{-KJ}f, \\
-		c' &= \left( \frac{1}{2}g^TJ\frac{e^{-KJ} - I}{KJ}M +f^T  \right)\frac{e^{JK} - I}{JK}Jg + c.
+		c' &= \left( \frac{1}{2}g^TJ\frac{e^{-KJ} - I}{KJ}M +f^T  \right)\frac{e^{JK} - I}{JK}Jg + s.
 	\end{align*}
 	
 	Using the relationship between the matrices $K$ and $C$ these expressions can be simplified. As a result, we obtain
@@ -243,7 +235,7 @@
 %		\label{eq:mfcdot}
 		M' &= \frac{1}{2}\left(I + \frac{2I}{2J^{-1}C - I}\right)MJ\left(I - \frac{2I}{2J^{-1}C + I}\right)J^{-1}, \\
 		f' &= 2\left(I + \frac{2I}{2J^{-1}C - I}\right)MJ\frac{I}{2J^{-1}C + I}J^{-1}m + \left(I + \frac{2I}{2J^{-1}C - I}\right)f, \\
-		c' &= 2\left(f^T - m^T\frac{I}{2J^{-1}C - I}M\right)J\frac{I}{2J^{-1}C + I}J^{-1}m + c
+		c' &= 2\left(f^T - m^T\frac{I}{2J^{-1}C - I}M\right)J\frac{I}{2J^{-1}C + I}J^{-1}m + s
 	\end{align}
 	
 	We also need to find a renormalization for the ansatz square. 
@@ -264,7 +256,7 @@
 	
 	\section{\label{sec:ConsideredSystem}  Driven dissipative Kerr model}
 	
-	Let us apply our general scheme to the one-mode Kerr model in the classical external field with dissipation. Namely, we consider the following master equation  (see, e.g., \\cite{asjad2023joint})
+	Let us apply our general scheme to the one-mode Kerr model in the classical external field with dissipation. Namely, we consider the following master equation  (see, e.g., \cite{asjad2023joint})
 	\begin{equation}
 		\label{eq:EvEq}
 		\dfrac{d}{dt}\rho(t) = (\mathcal{L}_0 + \lambda\mathcal{L}_I)\rho,
@@ -472,8 +464,7 @@
 		\end{center}
 	\end{figure}
 	
-	As can be seen, the results are of order $\la$, but for the quadratic operator the averages themselves are of the same order.
-	
+	As can be seen, the results are of order $\la^2$.
 	
 	\section{Conclusions}
 	In this work, we have focused on obtaining the Gaussian approximation for the one-mode Kerr model in the external classical field with dissipation. But let us remark that the proposed technique is general and can be applied to multi-mode dissipative models, whose free dynamics preserves the Gaussian states. The specific choice of the model allows us to verify it in the regime, when it is exactly solvable with non-Gaussian solutions. So it can be used as a benchmark of our approach in such an ''uncomfortable'' case for it. And, at the same time, our approach allows us to obtain the dynamics for this model in the case, when it is not exactly solvable. This demonstrates the usefulness of our technique.
@@ -613,7 +604,7 @@
 		\begin{align*}
 			M &= \frac{I}{C - \frac{J}{2}}\left(\frac{d}{dt}C\right)\frac{I}{C + \frac{J}{2}},\\
 			G &= \left(  I + \frac{2I}{2J^{-1}C - I}  \right)\frac{d}{dt}\left(\frac{I}{C + \frac{J}{2}}m\right),\\
-			c &=-m^T\frac{I}{2J^{-1}C -  I}\frac{d}{dt}\left(\frac{I}{C + \frac{J}{2}}m\right) + \frac{1}{2}\frac{d}{dt}m^T\left( \frac{I}{2J^{-1}C - I} - \frac{I}{2J^{-1}C + I} - KJ \right)J^{-1}m + \frac{d}{dt}c_t,
+			c &=-m^T\frac{I}{2J^{-1}C -  I}\frac{d}{dt}\left(\frac{I}{C + \frac{J}{2}}m\right) + \frac{1}{2}\frac{d}{dt}m^T\left( \frac{I}{2J^{-1}C - I} - \frac{I}{2J^{-1}C + I} - KJ \right)J^{-1}m + \frac{d}{dt}s,
 		\end{align*}
 		where $g = -Km$, in which $m = (\braket{a} , \braket{a^+})^T$ and $C$ --- covariance matrix.
 	\end{theorem}
@@ -627,7 +618,7 @@
 		\begin{align*}
 			M &= \frac{1}{2}\frac{I}{C - \frac{J}{2}}\left(\frac{d}{dt}C\right)\frac{I}{C + \frac{J}{2}},\\
 			G &= e^{-KJ}\frac{d}{dt}\left(\frac{e^{KJ} - I}{KJ}g\right),\\
-			c &= \frac{1}{2}g^TJ\frac{e^{-KJ} - I}{KJ}\frac{d}{dt}\left( \frac{e^{KJ} - I}{KJ}g  \right) + \frac{d}{dt}\left(  \frac{1}{2}g^T\frac{J}{KJ}(\text{sh}(KJ) - KJ)\frac{1}{KJ}g  +c_t \right).
+			c &= \frac{1}{2}g^TJ\frac{e^{-KJ} - I}{KJ}\frac{d}{dt}\left( \frac{e^{KJ} - I}{KJ}g  \right) + \frac{d}{dt}\left(  \frac{1}{2}g^T\frac{J}{KJ}(\text{sh}(KJ) - KJ)\frac{1}{KJ}g  +s \right).
 		\end{align*}
 		
 		
@@ -666,7 +657,7 @@
 		\end{align*}
 		
 		\begin{align*}
-			c = -m^T\frac{I}{2J^{-1}C -  I}\frac{d}{dt}\left(\frac{I}{C + \frac{J}{2}}m\right) + \frac{1}{2}\frac{d}{dt}m^T\left( \frac{I}{2J^{-1}C - I} - \frac{I}{2J^{-1}C + I} - KJ \right)J^{-1}m + \frac{d}{dt}c_t
+			c = -m^T\frac{I}{2J^{-1}C -  I}\frac{d}{dt}\left(\frac{I}{C + \frac{J}{2}}m\right) + \frac{1}{2}\frac{d}{dt}m^T\left( \frac{I}{2J^{-1}C - I} - \frac{I}{2J^{-1}C + I} - KJ \right)J^{-1}m + \frac{d}{dt}s
 		\end{align*}
 		where
 		
@@ -712,6 +703,10 @@
 		
 		\begin{equation*}
 			\frac{\operatorname{tr} e^{\frac12 \mathfrak{a}^T 2K  \mathfrak{a}}  }{(\operatorname{tr} e^{\frac12 \mathfrak{a}^T K  \mathfrak{a}})^2} = \sqrt{\left|\det\left(\frac{1}{-2J^{-1} C}\right)\right|} = \frac{1}{\sqrt{|\det(2 C)|}}
+		\end{equation*}
+		
+		\begin{equation*}
+			C' = C(K') = C(2K) = -\frac{J}{2}\coth\left(\frac{K'J}{2}\right) = -\frac{J}{2}\coth\left(2\left(\frac{KJ}{2}\right)\right) = - \frac{J}{4}\left(\frac{1}{2 J C} + 2 J C\right).
 		\end{equation*}
 	\end{demo}
 \end{document} 
