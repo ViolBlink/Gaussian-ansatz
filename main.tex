@@ -466,6 +466,50 @@
 	
 	As can be seen, the results are of order $\la^2$.
 	
+	\section{Strong field}
+	
+	In this section, we consider the opposite case to the one discussed in the previous section. In this case, we will zero out all terms in which degree $F < 3 $. 
+	
+	In this case, the action of the conjugate oscillator on an expression of type ${a^+}^na^m$ has the form
+	
+	\begin{equation}
+		\label{eq:GenStrongfield}
+		\mathcal{L}^*(t){a^+}^na^m = -i\dfrac{\chi}{2}\left((c_1 + c_4){a^+}^na^{m + 1} + (c_2 + c_3){a^+}^{n + 1}a^m + mc_3{a^+}^na^{m - 1} + nc_4{a^+}^{n - 1}a^m\right),
+	\end{equation}
+	where
+	\begin{align*}
+		c_1 &= 2b_2^2b_1a_1 - 2b_3^2b_4a_{42}, \\
+		c_2 &= 2b_1^2b_2a_{22} - 2b_4^2b_3a_3, \\
+		c_3 &= 2b_1^2b_2a_{21}, \\
+		c_4 &= -2b_3^2b_4a_{41}.
+	\end{align*}
+	
+	The plots of the mean particle number, linear operators and quadratic operators for the parameters $\ga = 1, \la = 10^{-2}, F = 10^2, \DE = 1, \chi = 1$ are shown in Fig. \ref{fig:strongn}, \ref{fig:stronga}, \ref{fig:stronga2}.
+	
+	\begin{figure}[h!]
+		\begin{center}
+			\begin{minipage}[h!]{0.45\linewidth}
+				\includegraphics[width=1\linewidth]{Strongn.JPG}
+				\caption{Average number of particles in the strong field}
+				\label{fig:strongn}
+			\end{minipage}
+			\hfil
+			\begin{minipage}[h!]{0.45\linewidth}
+				\includegraphics[width=1\linewidth]{Stronga.JPG}
+				\caption{Mean of the linear operator in a strong field}
+				\label{fig:stronga}
+			\end{minipage}
+			\hfil
+			\begin{minipage}[h!]{0.45\linewidth}
+				\includegraphics[width=1\linewidth]{Stronga2.JPG}
+				\caption{Mean of the quadratic operator in a strong field}
+				\label{fig:stronga2}
+			\end{minipage}
+		\end{center}
+	\end{figure}
+	
+	It is immediately apparent that in this regime the number of particles reaches a very large value of the order of $10^9$. It is also worth noting the fact that although the dynamics of damping of the number of particles is visible, it has oscillations, the number of particles has maxima and minima in time.
+	
 	\section{Conclusions}
 	In this work, we have focused on obtaining the Gaussian approximation for the one-mode Kerr model in the external classical field with dissipation. But let us remark that the proposed technique is general and can be applied to multi-mode dissipative models, whose free dynamics preserves the Gaussian states. The specific choice of the model allows us to verify it in the regime, when it is exactly solvable with non-Gaussian solutions. So it can be used as a benchmark of our approach in such an ''uncomfortable'' case for it. And, at the same time, our approach allows us to obtain the dynamics for this model in the case, when it is not exactly solvable. This demonstrates the usefulness of our technique.
 	
